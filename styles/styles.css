@@ -2,3 +2,40 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ' '; clear: both; height: 0; }
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+:root {
+  --accentColor: #fdc800;
+  --blackShade: #232323;
+  --whiteShade: #f8f8f8;
+  --backgroundColor: #eaedf4;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* 
+font-family: 'Cabin', sans-serif;
+font-family: 'Great Vibes', cursive;
+*/
+
+/* HEADER */
+
+header {
+  height: 100vh;
+  background: url(../assets/image-1.png);
+  background-size: contain;
+}

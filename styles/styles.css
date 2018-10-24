@@ -37,5 +37,6 @@ font-family: 'Great Vibes', cursive;
 header {
   height: 100vh;
   background: url(../assets/image-1.png);
-  background-size: contain;
+  background-size: cover;
+  border: 1px solid red;
 }

@@ -19,6 +19,7 @@ body {
 
 img {
   max-width: 100%;
+  display: block;
 }
 
 .wrapper {
@@ -26,6 +27,32 @@ img {
   width: 90%;
   margin: 0 auto;
 }
+
+a {
+  font-family: 'Cabin', sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: 'Cabin', sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.61;
+}
+
+.findOutMore {
+  width: 175px;
+  font-size: 1.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 20px;
+  color: var(--blackShade);
+  background: var(--accentColor);
+}
+
+/* * {
+  border: 1px solid red;
+} */
 
 /* 
 font-family: 'Cabin', sans-serif;
@@ -36,7 +63,137 @@ font-family: 'Great Vibes', cursive;
 
 header {
   height: 100vh;
-  background: url(../assets/image-1.png);
+  background: url(../assets/image-1.png) center;
   background-size: cover;
+}
+
+nav h2, nav ul {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+nav h2 {
+  float: left;
+  font-size: 5.5rem;
+  font-family: 'Great Vibes', cursive;
+  color: var(--blackShade);
+}
+
+nav ul {
+  float: right;
+  list-style: none;
+}
+
+nav li {
+  float: left;
+  font-size: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--blackShade);
+  margin: 20px 0;
+}
+
+header h1 {
+  font-size: 3.2rem;
+  font-family: 'Cabin', sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+}
+
+header h1 span {
+  font-size: 15.5rem;
+  font-family: 'Great Vibes', cursive;
+  text-transform: capitalize;
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+header h1 span::after {
+  content: '...'
+}
+
+.socialNav {
+  list-style: none;
+  padding: 0;
+}
+
+.socialNav a {
+  font-size: 2rem;
+  color: var(--accentColor);
+}
+
+
+/* ABOUT */
+
+.about {
+  background: var(--backgroundColor);
+  padding: 100px 0;
+}
+
+.innerWrapper {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+
+/* LINKS */
+
+.links {
+  background: var(--blackShade);
+  padding: 100px 0;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+  /* border: 1px solid white; */
+  width: 50%;
+  margin: 0 auto;
+}
+
+.links li {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+
+.links a {
+  color: var(--whiteShade);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+}
+
+
+/* GALLERY */
+
+.gallery {
+  background: var(--whiteShade);
+  padding: 100px 0;
+}
+
+.gallery div {
   border: 1px solid red;
+}
+
+.gallery figure {
+  float: left;
+  width: 33.33%;
+}
+
+.gallery figure:last-child {
+  /* margin: 0; */
+}
+
+.gallery img {
+  object-fit: contain;
 }

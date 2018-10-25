@@ -181,19 +181,37 @@ header h1 span::after {
   padding: 100px 0;
 }
 
-.gallery div {
-  border: 1px solid red;
-}
-
 .gallery figure {
   float: left;
-  width: 33.33%;
+  width: calc((100% - 80px) / 3);
+  margin: 0 40px 0 0;
 }
 
 .gallery figure:last-child {
-  /* margin: 0; */
+  margin: 0;
 }
 
-.gallery img {
-  object-fit: contain;
+
+
+/* TIPS & RECIPES */
+
+.floatItem {
+  float: left;
+  width: 50%;
+}
+
+.floatItem3 {
+  float: right;
+}
+
+.floatItem1, .floatItem3 {
+  background: var(--backgroundColor);
+  height: 100%;
+}
+
+
+/* BIO */
+
+.bio {
+  clear: both;
 }

@@ -24,7 +24,7 @@ img {
 
 .wrapper {
   max-width: 1280px;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -39,21 +39,6 @@ p {
   line-height: 1.61;
 }
 
-.findOutMore {
-  width: 175px;
-  font-size: 1.8rem;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 20px;
-  color: var(--blackShade);
-  background: var(--accentColor);
-}
-
-/* * {
-  border: 1px solid red;
-} */
-
 /* 
 font-family: 'Cabin', sans-serif;
 font-family: 'Great Vibes', cursive;
@@ -62,7 +47,7 @@ font-family: 'Great Vibes', cursive;
 /* HEADER */
 
 header {
-  height: 100vh;
+  min-height: 100vh;
   background: url(../assets/image-1.png) center;
   background-size: cover;
 }
@@ -82,11 +67,18 @@ nav h2 {
 nav ul {
   float: right;
   list-style: none;
+  padding: 0;
 }
 
 nav li {
   float: left;
   font-size: 2rem;
+  margin-left: 40px;
+  padding: 22px 0;
+}
+
+nav li:first-child {
+  margin: 0;
 }
 
 nav a {
@@ -100,28 +92,41 @@ header h1 {
   font-size: 3.2rem;
   font-family: 'Cabin', sans-serif;
   text-transform: uppercase;
-  position: relative;
   text-align: center;
+  margin-top: 25vh;
 }
 
 header h1 span {
   font-size: 15.5rem;
   font-family: 'Great Vibes', cursive;
   text-transform: capitalize;
-  position: absolute;
-  top: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-
+  display: block;
 }
 
 header h1 span::after {
-  content: '...'
+  content: '...';
+}
+
+header .wrapper {
+  position: relative;
 }
 
 .socialNav {
   list-style: none;
   padding: 0;
+  position: absolute;
+  top: 35vh;
+  right: -127px;
+}
+
+.socialNav li {
+  width: 100px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.socialNav li:last-child {
+  margin-bottom: 0;
 }
 
 .socialNav a {
@@ -191,8 +196,6 @@ header h1 span::after {
   margin: 0;
 }
 
-
-
 /* TIPS & RECIPES */
 
 .floatItem {
@@ -214,4 +217,24 @@ header h1 span::after {
 
 .bio {
   clear: both;
+  padding: 100px 0;
+  background: var(--whiteShade);
 }
+
+.bioContainer img, .bioContainer div {
+  float: left;
+}
+
+.bioContainer img {
+  width: calc(30% - 48px);
+  margin-right: 48px;
+  border-radius: 50%;
+}
+
+.bioContainer div {
+  width: 70%;
+}
+
+
+/* FOOTER */
+

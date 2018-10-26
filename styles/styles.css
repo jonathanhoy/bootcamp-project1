@@ -39,6 +39,26 @@ p {
   line-height: 1.61;
 }
 
+button {
+  font-family: 'Cabin', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  padding: 15px 35px;
+  transition: all 0.5s;
+  background: var(--accentColor);
+  color: var(--blackShade);
+  text-decoration: none;
+  width: auto;
+}
+
+button:hover {
+  color: var(--accentColor);
+  background: var(--blackShade);
+}
+
 /* 
 font-family: 'Cabin', sans-serif;
 font-family: 'Great Vibes', cursive;
@@ -134,7 +154,6 @@ header .wrapper {
   color: var(--accentColor);
 }
 
-
 /* ABOUT */
 
 .about {
@@ -148,6 +167,15 @@ header .wrapper {
   text-align: center;
 }
 
+.about h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4.2rem;
+  margin: 0;
+}
+
+.about p {
+  margin: 30px 0;
+}
 
 
 /* LINKS */
@@ -155,6 +183,7 @@ header .wrapper {
 .links {
   background: var(--blackShade);
   padding: 100px 0;
+  height: 300px;
 }
 
 .links ul {
@@ -176,6 +205,14 @@ header .wrapper {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 2.4rem;
+  position: relative;
+}
+
+.links i {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -57.5px;
 }
 
 

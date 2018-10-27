@@ -82,6 +82,7 @@ nav h2 {
   font-size: 5.5rem;
   font-family: 'Great Vibes', cursive;
   color: var(--blackShade);
+  font-weight: 400;
 }
 
 nav ul {
@@ -114,6 +115,7 @@ header h1 {
   text-transform: uppercase;
   text-align: center;
   margin-top: 25vh;
+  margin-bottom: 0;
 }
 
 header h1 span {
@@ -121,14 +123,11 @@ header h1 span {
   font-family: 'Great Vibes', cursive;
   text-transform: capitalize;
   display: block;
+  font-weight: 400;
 }
 
 header h1 span::after {
   content: '...';
-}
-
-header .wrapper {
-  position: relative;
 }
 
 .socialNav {
@@ -136,7 +135,7 @@ header .wrapper {
   padding: 0;
   position: absolute;
   top: 35vh;
-  right: -127px;
+  right: 30px;
 }
 
 .socialNav li {
@@ -171,6 +170,7 @@ header .wrapper {
   font-family: 'Great Vibes', cursive;
   font-size: 4.2rem;
   margin: 0;
+  font-weight: 400;
 }
 
 .about p {
@@ -189,7 +189,6 @@ header .wrapper {
 .links ul {
   list-style: none;
   padding: 0;
-  /* border: 1px solid white; */
   width: 50%;
   margin: 0 auto;
 }
@@ -198,34 +197,41 @@ header .wrapper {
   float: left;
   width: 33.33%;
   text-align: center;
-  /* border: 1px solid red; */
   height: 100px;
   position: relative;
 }
 
-.links i, .links a {
+.links a {
   color: var(--whiteShade);
   text-decoration: none;
   text-transform: uppercase;
   position: absolute;
+  transition: all 0.5s;
 }
 
-.links i {
+.links li:hover a {
+  color: var(--accentColor);
+}
+
+.links a:first-child {
   top: 0;
   left: 0;
   right: 0;
-  font-size: 4rem;
-  line-height: 0.65;
-  object-fit: contain;
+  font-size: 2.4rem;
 }
 
-.links a {
+.links a:last-child {
   bottom: 0;
   left: 0;
   right: 0;
   font-size: 2.4rem;
 }
 
+.links i {
+  font-size: 4rem;
+  line-height: 0.65;
+  object-fit: contain;
+}
 
 /* GALLERY */
 
@@ -247,19 +253,48 @@ header .wrapper {
 /* TIPS & RECIPES */
 
 .floatItem {
+  background: var(--backgroundColor);
+}
+
+.floatItem img {
   float: left;
   width: 50%;
 }
 
-.floatItem3 {
+.floatItem .innerWrapper {
+  width: 50%;
+  margin: 0;
+  float: left;
+}
+
+.floatItemBottom .innerWrapper {
   float: right;
 }
 
-.floatItem1, .floatItem3 {
-  background: var(--backgroundColor);
-  height: 100%;
+.floatItemTop .contentWrapper, .floatItemBottom .contentWrapper {
+  border: 1px solid red;
+  padding-left: 20%;
+  /* padding-right: 21%; */
+  /* padding-top: 50px; */
+  text-align: center;
 }
 
+.floatItemBottom .contentWrapper {
+  /* padding-left: 21%;
+  padding-right: 41%; */
+}
+
+.contentWrapper p {
+  width: 50%;
+  margin: 30px auto;
+}
+
+.contentWrapper h2 {
+  font-size: 3.2rem;
+  font-family: 'Cabin', sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+}
 
 /* BIO */
 
@@ -274,15 +309,58 @@ header .wrapper {
 }
 
 .bioContainer img {
-  width: calc(30% - 48px);
-  margin-right: 48px;
+  width: 30%;
   border-radius: 50%;
 }
 
 .bioContainer div {
-  width: 70%;
+  width: calc(70% - 50px);
+  margin-left: 50px;
 }
 
+.bio h2 {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  font-size: 4.2rem;
+  color: var(--blackShade);
+  margin: 0;
+}
+
+.bio p {
+  margin: 30px 0;
+  line-height: 1.61;
+}
 
 /* FOOTER */
 
+footer {
+  background: var(--blackShade);
+}
+
+footer * {
+  color: white;
+}
+
+.footerCopyright {
+  background: black;
+  text-align: center;
+}
+
+.footerCopyright p, .footerCopyright a {
+  color:rgba(248,248,248,0.5);
+}
+
+.footerCopyright p {
+  margin: 0;
+  padding: 10px;
+}
+.footerCopyright a {
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.footerCopyright a:hover {
+  color: var(--accentColor);
+  transition: all 0.5s;
+  line-height: 1.61;
+}

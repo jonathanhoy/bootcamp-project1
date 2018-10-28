@@ -182,6 +182,22 @@ header h1 span::after {
   }
   nav li:last-child {
     display: block;
+    padding: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  header h1 span {
+    font-size: 12rem;
+  }
+}
+
+@media (max-width: 400px) {
+  nav h2 {
+    font-size: 4rem;
+  }
+  header h1 {
+    font-size: 2.2rem;
   }
 }
 
@@ -212,6 +228,18 @@ header h1 span::after {
 @media (max-width: 768px) {
   .about {
     padding: 75px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .about {
+    padding: 50px 0;
+  }
+  .innerWrapper {
+    width: 100%;
+  }
+  .about p {
+    margin-top: 15px;
   }
 }
 
@@ -280,6 +308,20 @@ header h1 span::after {
   }
   .links ul {
     width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  .links {
+    padding: 50px 0;
+  }
+  .links li {
+    float: none;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .links li:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -432,6 +474,9 @@ header h1 span::after {
 }
 
 @media (max-width: 768px) {
+  .bio {
+    padding: 75px 0;
+  }
   .bioContainer img, .bioContainer div {
     float: none;
   }
@@ -521,6 +566,10 @@ footer * {
   width: 50%;
 }
 
+.footerSubscribeForm p {
+  margin: 10px 0;
+}
+
 .footerSubscribeForm input[type="email"] {
   float: left;
   width: calc(100% - 160px);
@@ -592,6 +641,9 @@ footer * {
 }
 
 @media (max-width: 768px) {
+  .footerContainer {
+    padding: 75px 0;
+  }
   .footerContact, .footerPages, .footerSubscribeForm {
     float: none;
     width: 100%;
@@ -609,6 +661,12 @@ footer * {
     width: 25%;
     position: relative;
   }
+  .footerPages li:nth-child(3) a {
+    width: 20%;
+  }
+  .footerPages li:nth-child(4) a {
+    width: 30%;
+  }
   .footerPages a::after {
     content: "|";
     position: absolute;
@@ -620,5 +678,14 @@ footer * {
   .footerPages ul {
     width: 75%;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .footerSubscribeForm {
+    width: 100%;
+  }
+  .footerPages ul {
+    width: 100%;
   }
 }

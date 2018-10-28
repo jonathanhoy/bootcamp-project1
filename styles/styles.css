@@ -352,6 +352,22 @@ header h1 span::after {
   }
 }
 
+@media (max-width: 400px) {
+  .gallery {
+    padding: 0;
+  }
+  .gallery .wrapper {
+    width: 100%;
+  }
+  .gallery figure {
+    margin: 0;
+    width: 50%;
+  }
+  .gallery figure:last-child {
+    display: none;
+  }
+}
+
 /* TIPS & RECIPES */
 
 .floatItem {
@@ -438,6 +454,12 @@ header h1 span::after {
   }
 }
 
+@media (max-width: 400px) {
+  .floatItemTop .contentWrapper, .floatItemBottom .contentWrapper {
+    padding: 50px 0;
+  }
+}
+
 /* BIO */
 
 .bio {
@@ -494,14 +516,30 @@ header h1 span::after {
   }
 }
 
-/* FOOTER */
-
-footer {
-  background: var(--blackShade);
+@media (max-width: 400px) {
+  .bio {
+    padding: 50px 0;
+  }
+  .bio .wrapper {
+    width: 100%;
+  }
+  .bioContainer img {
+    margin: 0 auto;
+  }
+  .bioContainer h2 {
+    margin: 30px 0;
+  }
+  .bioContainer p {
+    width: 90%;
+    margin: 0 auto 30px auto;
+  }
 }
 
-footer * {
-  color: white;
+/* FOOTER */
+
+footer, footer a {
+  background: var(--blackShade);
+  color: var(--whiteShade);
 }
 
 .footerContainer {
@@ -540,8 +578,8 @@ footer * {
   margin-right: 15px;
 }
 
-.footerContact p {
-  margin: 0;
+.footerContact a {
+  display: block;
 }
 
 .footerContact li {
@@ -574,6 +612,8 @@ footer * {
   float: left;
   width: calc(100% - 160px);
   color: var(--blackShade);
+  font-size: 1.8rem;
+  line-height: 1.61;
   padding: 10px 30px;
   height: 50px;
   border: none;
@@ -597,7 +637,7 @@ footer * {
   cursor: pointer;
 }
 
-.footerCopyright {
+.footerCopyright, .footerCopyright a {
   background: black;
   text-align: center;
 }
@@ -617,7 +657,7 @@ footer * {
   font-weight: 400;
 }
 
-.footerCopyright a:hover {
+.footerContact a:hover, .footerPages a:hover, .footerCopyright a:hover {
   color: var(--accentColor);
   transition: all 0.5s;
   line-height: 1.61;
@@ -656,6 +696,23 @@ footer * {
   .footerContact, .footerPages {
     margin-top: 30px;
   }
+  .footerContact a {
+    float: left;
+    width: 50%;
+    text-align: right;
+    padding: 0 5px;
+  }
+  .footerContact a:first-child::after {
+    content: ",";
+  }
+  .footerContact a:nth-child(2) {
+    text-align: left;
+  }
+  .footerContact a:last-child {
+    clear: both;
+    width: 100%;
+    text-align: center;
+  }
   .footerPages a {
     float: left;
     width: 25%;
@@ -671,6 +728,7 @@ footer * {
     content: "|";
     position: absolute;
     right: 0;
+    color: var(--whiteShade);
   }
   .footerPages li:last-child a::after {
     content: "";
@@ -682,10 +740,16 @@ footer * {
 }
 
 @media (max-width: 400px) {
+  .footerContainer {
+    padding: 50px 0;
+  }
   .footerSubscribeForm {
     width: 100%;
   }
   .footerPages ul {
     width: 100%;
+  }
+  footer h3 {
+    margin-bottom: 10px;
   }
 }

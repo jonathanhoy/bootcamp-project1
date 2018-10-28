@@ -76,6 +76,12 @@ button:hover {
   background: var(--blackShade);
 }
 
+@media (max-width: 768px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+
 /* HEADER */
 
 header {
@@ -236,7 +242,6 @@ header h1 span::after {
   color: var(--whiteShade);
   text-decoration: none;
   text-transform: uppercase;
-  position: absolute;
   transition: all 0.5s;
 }
 
@@ -244,18 +249,22 @@ header h1 span::after {
   color: var(--accentColor);
 }
 
-.links a:first-child {
+.links i, .links h3 {
+  font-size: 2.4rem;
+  margin: 0;
+  position: absolute;
+}
+
+.links i {
   top: 0;
   left: 0;
   right: 0;
-  font-size: 2.4rem;
 }
 
-.links a:last-child {
+.links h3 {
   bottom: 0;
   left: 0;
   right: 0;
-  font-size: 2.4rem;
 }
 
 .links i {
@@ -270,7 +279,7 @@ header h1 span::after {
     height: auto;
   }
   .links ul {
-    width: 75%;
+    width: 90%;
   }
 }
 
@@ -289,6 +298,16 @@ header h1 span::after {
 
 .gallery figure:last-child {
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    padding: 75px 0;
+  }
+  .gallery figure {
+    width: calc((100% - 40px) / 3);
+    margin: 0 20px 0 0;
+  }
 }
 
 /* TIPS & RECIPES */
@@ -367,6 +386,14 @@ header h1 span::after {
     float: none;
     width: 100%;
   }
+  .floatItemTop .contentWrapper, .floatItemBottom .contentWrapper {
+    padding: 75px 0;
+    width: 75%;
+    margin: 0 auto;
+  }
+  .contentWrapper p {
+    margin: 30px 0;
+  }
 }
 
 /* BIO */
@@ -404,6 +431,24 @@ header h1 span::after {
   line-height: 1.61;
 }
 
+@media (max-width: 768px) {
+  .bioContainer img, .bioContainer div {
+    float: none;
+  }
+  .bioContainer img {
+    width: 50%;
+    margin: 0 auto 50px auto;
+  }
+  .bioContainer div {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  .bioContainer div p {
+    text-align: left;
+  }
+}
+
 /* FOOTER */
 
 footer {
@@ -436,7 +481,12 @@ footer * {
   list-style: none;
   padding: 0;
 }
-.footerContact, .footerPages, .footerRecentPosts, .footerSubscribeForm {
+
+.footerSubscribeForm {
+  float: right;
+}
+
+.footerContact, .footerPages, .footerRecentPosts {
   float: left;
 }
 
@@ -454,8 +504,12 @@ footer * {
   padding: 0;
 }
 
+.footerPages {
+  text-transform: uppercase;
+}
+
 .footerRecentPosts {
-  width: calc(20% - 50x);
+  width: calc(20% - 50px);
   margin-right: 50px;
 }
 
@@ -469,7 +523,7 @@ footer * {
 
 .footerSubscribeForm input[type="email"] {
   float: left;
-  width: 70%;
+  width: calc(100% - 160px);
   color: var(--blackShade);
   padding: 10px 30px;
   height: 50px;
@@ -478,7 +532,7 @@ footer * {
 
 .footerSubscribeForm input[type="submit"] {
   float: left;
-  width: 30%;
+  width: 160px;
   height: 50px;
   font-family: 'Cabin', sans-serif;
   font-size: 1.8rem;
@@ -492,11 +546,6 @@ footer * {
   color: var(--blackShade);
   text-decoration: none;
   cursor: pointer;
-}
-
-.footerSubscribeForm input[type="submit"]:hover {
-  color: var(--accentColor);
-  background: var(--blackShade);
 }
 
 .footerCopyright {
@@ -523,4 +572,53 @@ footer * {
   color: var(--accentColor);
   transition: all 0.5s;
   line-height: 1.61;
+}
+
+@media (max-width: 1000px) {
+  .footerRecentPosts {
+    display: none;
+  }
+  .footerContact, .footerPages {
+    width: calc(25% - 15px);
+    margin-right: 15px;
+  }
+  .footerSubscribeForm input[type="email"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .footerSubscribeForm input[type="submit"] {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footerContact, .footerPages, .footerSubscribeForm {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  .footerSubscribeForm {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .footerContact, .footerPages {
+    margin-top: 30px;
+  }
+  .footerPages a {
+    float: left;
+    width: 25%;
+    position: relative;
+  }
+  .footerPages a::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+  }
+  .footerPages li:last-child a::after {
+    content: "";
+  }
+  .footerPages ul {
+    width: 75%;
+    margin: 0 auto;
+  }
 }

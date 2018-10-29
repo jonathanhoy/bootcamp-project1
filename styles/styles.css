@@ -54,7 +54,7 @@ p {
   line-height: 1.61;
 }
 
-button {
+.btn {
   font-family: 'Cabin', sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
@@ -69,7 +69,7 @@ button {
   cursor: pointer;  
 }
 
-button:hover {
+.btn:hover {
   color: var(--accentColor);
   background: var(--blackShade);
 }
@@ -181,7 +181,7 @@ header h1 span::after {
   }
   nav li:last-child {
     display: block;
-    padding: 0;
+    padding: 12px 0 0 0;
   }
 }
 
@@ -235,7 +235,7 @@ header h1 span::after {
     padding: 50px 0;
   }
   .innerWrapper {
-    width: 100%;
+    width: 90%;
   }
   .about p {
     margin-top: 15px;
@@ -367,7 +367,7 @@ header h1 span::after {
   }
 }
 
-/* TIPS & RECIPES */
+/* BLOG */
 
 .floatItem {
   background: var(--backgroundColor);
@@ -672,6 +672,10 @@ footer a {
   .footerSubscribeForm input[type="email"] {
     width: 100%;
     margin-bottom: 10px;
+    text-align: center;
+  }
+  .footerSubscribeForm input[type="email"]::placeholder {
+    text-align: center;
   }
   .footerSubscribeForm input[type="submit"] {
     width: 100%;

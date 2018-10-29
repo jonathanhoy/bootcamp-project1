@@ -183,6 +183,9 @@ header h1 span::after {
     display: block;
     padding: 12px 0 0 0;
   }
+  .socialNav {
+    display: none;
+  }
 }
 
 @media (max-width: 500px) {
@@ -197,6 +200,12 @@ header h1 span::after {
   }
   header h1 {
     font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 350px) {
+  header h1 span {
+    font-size: 10rem;
   }
 }
 

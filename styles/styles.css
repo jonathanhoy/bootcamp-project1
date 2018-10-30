@@ -82,7 +82,7 @@ header {
   background-size: cover;
 }
 
-nav h2, nav ul {
+nav h2, .mainNav {
   margin-top: 15px;
   margin-bottom: 0;
 }
@@ -95,20 +95,20 @@ nav h2 {
   font-family: 'Great Vibes', cursive;
 }
 
-nav ul {
+.mainNav {
   float: right;
   list-style: none;
   padding: 0;
 }
 
-nav li {
+.mainNav li {
   float: left;
   font-size: 2rem;
   margin-left: 40px;
   padding: 22px 0;
 }
 
-nav li:first-child {
+.mainNav li:first-child {
   margin: 0;
 }
 
@@ -186,6 +186,7 @@ header h1 span::after {
   .socialNav {
     display: none;
   }
+  
 }
 
 @media (max-width: 500px) {
@@ -344,6 +345,7 @@ header h1 span::after {
   float: left;
   width: calc((100% - 80px) / 3);
   margin: 0 40px 0 0;
+  position: relative;
 }
 
 .gallery figure:last-child {

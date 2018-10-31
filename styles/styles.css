@@ -379,26 +379,26 @@ header h1 span::after {
 
 /* BLOG */
 
-.floatItem {
+.blogFloatItem {
   background: var(--backgroundColor);
 }
 
-.floatItemTop img, .floatItemBottom img {
+.blogFloatItemTop img, .blogFloatItemBottom img {
   float: right;
   width: 50%;
 }
 
-.floatItemBottom img {
+.blogFloatItemBottom img {
   float: left;
 }
 
-.floatItem .innerWrapper {
+.blogFloatItem .innerWrapper {
   width: 50%;
   margin: 0;
   float: left;
 }
 
-.floatItemBottom .innerWrapper {
+.blogFloatItemBottom .innerWrapper {
   float: right;
 }
 
@@ -408,12 +408,12 @@ header h1 span::after {
   margin-top: 10%;
 }
 
-.floatItemTop .contentWrapper {
+.blogFloatItemTop .contentWrapper {
   float: right;
   margin-right: 15%;
 }
 
-.floatItemBottom .contentWrapper {
+.blogFloatItemBottom .contentWrapper {
   float: left;
   margin-left: 15%;
 }
@@ -430,13 +430,13 @@ header h1 span::after {
 }
 
 @media (max-width: 1130px) {
-  .floatItemTop .contentWrapper, .floatItemBottom .contentWrapper {
+  .blogFloatItemTop .contentWrapper, .blogFloatItemBottom .contentWrapper {
     width: 75%;
   }
 }
 
 @media (max-width: 1000px) {
-  .floatItemTop .contentWrapper, .floatItemBottom .contentWrapper {
+  .blogFloatItemTop .contentWrapper, .blogFloatItemBottom .contentWrapper {
     margin: 5px 0 0 0;
     padding: 5px;
     width: 100%;
@@ -449,11 +449,11 @@ header h1 span::after {
 }
 
 @media (max-width: 768px) {
-  .floatItemTop img, .floatItemBottom img, .floatItemTop .innerWrapper, .floatItemBottom .innerWrapper {
+  .blogFloatItemTop img, .blogFloatItemBottom img, .blogFloatItemTop .innerWrapper, .blogFloatItemBottom .innerWrapper {
     float: none;
     width: 100%;
   }
-  .floatItemTop .contentWrapper, .floatItemBottom .contentWrapper {
+  .blogFloatItemTop .contentWrapper, .blogFloatItemBottom .contentWrapper {
     padding: 75px 0;
     width: 75%;
     margin: 0 auto;
@@ -464,7 +464,7 @@ header h1 span::after {
 }
 
 @media (max-width: 400px) {
-  .floatItemTop .contentWrapper, .floatItemBottom .contentWrapper {
+  .blogFloatItemTop .contentWrapper, .blogFloatItemBottom .contentWrapper {
     padding: 50px 0;
   }
 }

@@ -621,12 +621,14 @@ footer a {
 .footerSubscribeForm input[type="email"] {
   float: left;
   width: calc(100% - 160px);
-  color: var(--blackShade);
+  font-family: 'Cabin', sans-serif;
   font-size: 1.8rem;
+  color: var(--blackShade);
   line-height: 1.61;
   padding: 10px 30px;
   height: 50px;
   border: none;
+
 }
 
 .footerSubscribeForm input[type="submit"] {
